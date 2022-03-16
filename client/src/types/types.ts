@@ -3,6 +3,7 @@ export interface ITicket {
     price: number
     carrier: string
     segments: IFlight[]
+    id: string
 }
 
 export interface IFlight {
@@ -11,4 +12,5 @@ export interface IFlight {
     date: string
     stops: string[]
     duration: number
+    id: string
 }

@@ -22,7 +22,7 @@ const TicketList: FC<{ tickets: ITicket[] }> = ({tickets}) => {
     const ticketList = filteredTickets.map(ticket =>
         <li
             className="ticket_list_item"
-            key={JSON.stringify(ticket.segments)}
+            key={ticket.id}
         >
             <Ticket ticket={ticket}/>
         </li>);

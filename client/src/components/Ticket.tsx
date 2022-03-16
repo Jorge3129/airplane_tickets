@@ -8,7 +8,7 @@ const Ticket: FC<{ ticket: ITicket }> = ({ticket}) => {
     const {price, carrier, segments} = ticket;
 
     const flightList = segments.map(flight =>
-        <li key={flight.date + ''}>
+        <li key={flight.id}>
             <Flight flight={flight}/>
         </li>);
 
