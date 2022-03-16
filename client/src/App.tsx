@@ -10,11 +10,10 @@ const App: FC = () => {
 
     const fetchTickets = async () => {
         const response = await axios.get('https://front-test.beta.aviasales.ru/search');
-        console.log(response)
-        const {searchId} = response.data;
-        const response2 = await axios.get(`https://front-test.beta.aviasales.ru/tickets?searchId=${searchId}`);
-        const {tickets} = response2.data;
-        setTickets(tickets.slice(0, 10));
+        const response2 = await axios.get(`https://front-test.beta.aviasales.ru/tickets?searchId=${response.data.searchId}`);
+        setTickets(response2.data.tickets
+            .slice(0, 10)
+            .map((t: ITicket) => ({...t, price: Math.floor(t.price / 200)})));
     }
 
     useEffect(() => {

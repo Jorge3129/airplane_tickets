@@ -1,0 +1,136 @@
+
+:root {
+    --blue: #218eff;
+    --white: #fff;
+    --text-grey: #686969;
+    --grey: #c8d6e8;
+}
+
+.ticket_main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    max-width: 800px;
+    margin: 3em auto;
+    gap: 0;
+}
+
+.ticket_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.ticket_list_item {
+    width: 100%;
+}
+
+.ticket_sort,
+.ticket {
+    background-color: var(--white);
+    margin: 0.6em;
+    border-radius: 5px;
+    box-shadow: 3px 3px 7px #dce1ea, -2px -2px 6px #dce1ea;
+}
+
+.ticket_sort {
+    display: flex;
+}
+
+.ticket_sort_option {
+    background: none;
+    color: var(--text-grey);
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-align: center;
+    padding: 0.8em;
+    flex: 1;
+}
+
+.ticket_sort_option:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.ticket_sort_option:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.highlight {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.ticket {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.ticket-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 1em 2em 0 1em;
+}
+
+.ticket-header-price {
+    color: var(--blue);
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.ticket-header-carrier {
+    color: var(--text-grey);
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 0.5em;
+}
+
+.ticket-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0.5em;
+}
+
+.flight {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0.5em;
+}
+
+.flight_cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 3em;
+    font-size: 0.9em;
+}
+
+.flight_cell:last-child {
+    margin-right: 1em;
+}
+
+.flight_cell_title {
+    color: #aaa;
+}
+
+.flight_cell_info {
+    color: #333;
+}
+
+@media screen and (max-width: 800px) {
+    .ticket_main {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 3em 1em;
+    }
+
+    .ticket_list {
+        transition: all ease 0.5s;
+    }
+}

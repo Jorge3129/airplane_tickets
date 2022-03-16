@@ -1,13 +1,16 @@
 import React, {FC} from 'react';
 import {ITicket} from "../types/types";
 import Flight from "./Flight";
-import './Ticket.css'
+import '../styles/Ticket.css'
 
 const Ticket: FC<{ ticket: ITicket }> = ({ticket}) => {
 
     const {price, carrier, segments} = ticket;
 
-    const flightList = segments.map(flight => <li key={flight.date + ''}><Flight flight={flight}/></li>);
+    const flightList = segments.map(flight =>
+        <li key={flight.date + ''}>
+            <Flight flight={flight}/>
+        </li>);
 
     return (
         <div className="ticket">
