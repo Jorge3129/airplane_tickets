@@ -4,6 +4,7 @@ export interface ITicket {
     carrier: string
     segments: IFlight[]
     id: string
+    logo: string
 }
 
 export interface IFlight {

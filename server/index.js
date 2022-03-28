@@ -1,11 +1,12 @@
 const express = require('express');
-const {generateTicketArray} = require("./utils/utils");
+const {generateTicketArray} = require("./utils/tickets");
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const cors = require('cors');
 
 app.use(cors({
-    origin: ['http://localhost:4000', 'http://localhost:3000']
+    origin: ['http://localhost:4000', 'http://localhost:3000',
+        'https://aviasales-server.herokuapp.com/','https://sanchez-aviasales.herokuapp.com']
 }))
 
 

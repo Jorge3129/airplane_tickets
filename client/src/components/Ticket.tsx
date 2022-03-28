@@ -5,7 +5,7 @@ import '../styles/Ticket.css'
 
 const Ticket: FC<{ ticket: ITicket }> = ({ticket}) => {
 
-    const {price, carrier, segments} = ticket;
+    const {price, logo, segments} = ticket;
 
     const flightList = segments.map(flight =>
         <li key={flight.id}>
@@ -19,7 +19,11 @@ const Ticket: FC<{ ticket: ITicket }> = ({ticket}) => {
                     {price} USD
                 </div>
                 <div className="ticket-header-carrier">
-                    {carrier}
+                    <img
+                        src={logo}
+                        alt={logo.split('-').slice(-1)[0]}
+                        style={{maxWidth: '6em', height: '1.2em'}}
+                    />
                 </div>
             </div>
             <ul className="ticket-body">

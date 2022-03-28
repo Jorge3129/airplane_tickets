@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 2em;
-    max-height: 250px;
+    max-height: 17em;
 }
 
 .ticket_filter_title {
@@ -126,5 +126,30 @@
         padding: 10px;
         width: 100%;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .checkmark {
+        position: absolute;
+        top: 6px;
+        left: 15px;
+        height: 15px;
+        width: 15px;
+        background-color: var(--white);
+        border: 2px solid var(--grey);
+        border-radius: 2px;
+    }
+
+    .container .checkmark:after {
+        left: 7px;
+        top: 3px;
+        width: 5px;
+        height: 6px;
+        border: solid var(--blue);
+        border-width: 0 3px 3px 0;
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
     }
 }

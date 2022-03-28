@@ -1,3 +1,4 @@
+const {images} = require("./airlines");
 const stops = (num) => {
     switch (num) {
         case 1:
@@ -11,7 +12,7 @@ const stops = (num) => {
     }
 }
 
-const generateTicket = () => {
+const generateTicket = (logo) => {
     return {
         price: Math.floor(Math.random() * 200),
         carrier: 'XXX',
@@ -34,13 +35,13 @@ const generateTicket = () => {
             }
         ],
         id: Math.random() + Math.random() + 'xd',
+        logo: logo
     }
 }
 
 const generateTicketArray = () => {
-    return Array(10)
-        .fill(null)
-        .map(o => generateTicket());
+    return images
+        .map(img => generateTicket(img));
 }
 
 module.exports = {generateTicketArray}

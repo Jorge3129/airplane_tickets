@@ -51,7 +51,7 @@
 }
 
 .ticket_sort_option:first-child {
-    border-radius: 5px 0 0 5px;
+    border-radius: 0.3em 0 0 0.3em;
 }
 
 .ticket_sort_option:last-child {
@@ -106,6 +106,7 @@
 .flight_cell {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
     margin-right: 3em;
     font-size: 0.9em;
@@ -133,4 +134,10 @@
     .ticket_list {
         transition: all ease 0.5s;
     }
+}
+
+@media screen and (max-width: 350px) {
+  * {
+      font-size: 95%;
+  }
 }
