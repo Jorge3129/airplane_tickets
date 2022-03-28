@@ -5,6 +5,7 @@ import '../styles/Ticket.css'
 import _ from 'lodash';
 import TicketSort from "./TicketSort";
 import TicketFilter from "./TicketFilter";
+import LoadSpinner from "./LoadSpinner";
 
 const TicketList: FC<{ tickets: ITicket[] }> = ({tickets}) => {
 
@@ -28,11 +29,11 @@ const TicketList: FC<{ tickets: ITicket[] }> = ({tickets}) => {
         </li>);
 
     return (
-        <main className="ticket_main">
+        <main className="app_main">
             <TicketFilter transfers={transfers} setTransfers={setTransfers}/>
             <ul className="ticket_list">
                 <TicketSort sort={sort} setSort={setSort}/>
-                {ticketList}
+                {tickets.length ? ticketList: <LoadSpinner/>}
             </ul>
         </main>
     );

@@ -1,21 +1,115 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
 }
 
 :root {
-  --light-grey: #eaf1fa;
+    --light-grey: #eaf1fa;
+    --light-blue-gray: #e1e9f5;
+    --white: #fff;
+    --gray: #b5b3b0;
+    --shadow-gray: #dce1ea;
+    --box-shadow: 0.1em 0.1em 0.6em var(--shadow-gray), -0.1em -0.1em 0.6em var(--shadow-gray);
 }
 
 body {
-  background-color: var(--light-grey);
-  width: 100%;
-  height: 100%;
+    background-color: var(--light-grey);
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    height: 100vh;
+    width: 100%;
 }
 
 .App {
-  text-align: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+.app_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    margin: 2em auto;
+}
+
+.app_header_logo {
+    width: 5em;
+    margin: 1em auto 1em;
+    border-radius: 50%;
+    box-shadow: 0.4em 0.4em 0.5em #999;
+}
+
+.app_header_title {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 2.4em;
+    color: var(--white);
+    text-shadow: 0.1em 0.1em 0.02em var(--blue), -0.04em -0.04em 0.8em var(--blue-lighter);
+}
+
+.app_main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    max-width: 800px;
+    margin: 2em auto;
+    gap: 0;
+    flex: 4 0 auto;
+}
+
+.app_footer {
+    padding: 1em;
+    background-color: var(--blue-lighter);
+    box-shadow: var(--box-shadow);
+    color: var(--light-blue-gray);
+    font-size: 1em;
+    font-weight: 600;
+    justify-self: flex-end;
+}
+
+.source_code_link {
+    color: var(--white);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 850px) {
+    .app_header_title {
+        font-size: 1.8em;
+        transition: all 0.3s ease;
+    }
+
+    .app_main {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 2em 1em;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    * {
+        font-size: 95%;
+    }
+}
+
+
+@media screen and (max-width: 220px) {
+    * {
+        font-size: 85%;
+    }
+}
+
+@media screen and (max-width: 150px) {
+    * {
+        font-size: 78%;
+    }
+}

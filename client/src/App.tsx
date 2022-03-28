@@ -4,6 +4,8 @@ import TicketList from "./components/TicketList";
 import {ITicket} from "./types/types";
 import ticketApi from "./api/ticketApi";
 import logo from './assets/logo3.png'
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App: FC = () => {
 
@@ -18,15 +20,9 @@ const App: FC = () => {
 
     return (
         <div className="App">
-            <img
-                src={logo}
-                alt="lol"
-                style={{width: '8em',
-                    margin: '3em auto 0',
-                    borderRadius: '50%',
-                    boxShadow: '0.4em 0.4em 0.5em #999'}}
-            />
+            <Header/>
             <TicketList tickets={tickets}/>
+            <Footer/>
         </div>
     );
 }
