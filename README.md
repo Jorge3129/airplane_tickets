@@ -12,7 +12,7 @@ The app will run on [http://localhost:3000](http://localhost:3000).
 
 I also deployed this app on Heroku:
 
-Client: [https://sanchez-airplane-tickets.herokuapp.com]([https://sanchez-airplane-tickets.herokuapp.com)
+Client: [https://sanchez-airplane-tickets.herokuapp.com](https://sanchez-airplane-tickets.herokuapp.com)
 
 Server: [https://sanchez-airplane-server.herokuapp.com](https://sanchez-airplane-server.herokuapp.com)
 
