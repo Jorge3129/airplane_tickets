@@ -12,9 +12,9 @@ The app will run on [http://localhost:3000](http://localhost:3000).
 
 I also deployed this app on Heroku:
 
-Client: [https://sanchez-aviasales.herokuapp.com](https://sanchez-aviasales.herokuapp.com)
+Client: [sanchez-airplane-tickets](sanchez-airplane-tickets)
 
-Server: [https://aviasales-server.herokuapp.com](https://aviasales-server.herokuapp.com)
+Server: [https://sanchez-airplane-server.herokuapp.com](https://sanchez-airplane-server.herokuapp.com)
 
 The server responds with random mock data.
 
